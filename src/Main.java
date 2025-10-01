@@ -1,10 +1,22 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.printf("Hello and welcome!");
+        // Make a Random Generator
+        Random rng = new Random();
 
-        for (int i = 1; i <= 5; i++) {
+        // Create Dogg
+        Dog puppy = new Dog("Puppy");
 
-            System.out.println("i = " + i);
+        // Print inital status
+        System.out.println("Starting Status:");
+        System.out.println(puppy.status());
+
+        //advance a few days
+        for (int day = 1; day <=5; day++) {
+            puppy.tick(rng);
+            System.out.println("Day "+ day + ": " + puppy.status());
         }
+
     }
 }

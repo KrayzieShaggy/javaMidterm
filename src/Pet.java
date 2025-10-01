@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
  * Abstract Pet: shared stats + minimal behavior.
  * Multilevel chain: Creature -> Pet -> (Dog/Cat)
@@ -14,5 +16,19 @@ public abstract class Pet extends Creature {
     public String status() {
         return String.format("%s  HUN:%d  HYG:%d  HAP:%d", name, hunger, hygiene, happiness);
     }
+    public abstract void tick(Random rng);
+
+    protected void bumpHunger(int d) {
+        hunger = clamp(hunger + d);
+    }
+    protected void bumpHygine(int d) {
+        hygiene = clamp(hygiene +d);
+    }
+    protected void bumpHappiness(int d) {
+        happiness = clamp(happiness +d);
+    }
+
+    protected int clamp(int v) {
+        return Math.max(0, Math.min(100, v));
+    }
 }
-testting

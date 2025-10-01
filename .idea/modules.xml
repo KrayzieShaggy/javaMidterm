@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/javeMidterm.iml" filepath="$PROJECT_DIR$/javeMidterm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaMidterm.iml" filepath="$PROJECT_DIR$/javaMidterm.iml" />
     </modules>
   </component>
 </project>
